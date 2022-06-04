@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+
+.abt-me-con {
+  padding: 40px;
+  height: fit-content;
+  background-color: rgba(
+    185,
+    226,
+    144,
+    0.733
+  ); /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(170, 246, 77, 0.733),
+    rgb(230, 251, 229)
+  );
+}
+.card {
+  width: 1100px;
+  height: 300px;
+  margin: 0 auto;
+  .card-body {
+    padding: 20px;
+    p {
+      color: #6a2b;
+      font-size: 30px;
+      font-family: "Karla", sans-serif;
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 786px) {
+  .card {
+    width: fit-content;
+    height: fit-content;
+    .card-body {
+      width: fit-content;
+      height: fit-content;
+      p {
+        color: #6a2b;
+        font-size: 20px;
+      }
+    }
+  }
+}
