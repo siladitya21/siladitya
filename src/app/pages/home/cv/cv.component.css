@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+.container {
+  border: 5px solid rebeccapurple;
+  width: 1000px;
+  padding: 20px;
+}
+.name {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+}
+.designation {
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  color: greenyellow;
+}
+.profile {
+  font-family: "Jura", sans-serif;
+  font-size: 20px;
+}
+.left_margin {
+  background-color: rebeccapurple;
+}
+.right_margin {
+  background-color: greenyellow;
+}
+.left_segment {
+  font-family: "Jura", sans-serif;
+}
+.right_segment {
+  font-family: "Jura", sans-serif;
+}
+
+.image {
+  margin-top: 15px;
+  width: 300px;
+  height: 300px;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.heading {
+  font-size: 30px;
+  color: greenyellow;
+}
+
+.contacts,
+.skills {
+  margin-top: 30px;
+}
+.glyphicon {
+  font-size: 20px;
+  border: 1px solid greenyellow;
+  padding: 5px;
+  border-radius: 50%;
+}
+.dd {
+  display: block;
+}
