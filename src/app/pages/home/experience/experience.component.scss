@@ -86,3 +86,28 @@
   );
   height: 300px;
 }
+
+.video-con {
+  width: fit-content;
+
+  display: flex;
+  padding: 30px;
+  margin: 0 auto;
+  .video {
+    border: 1px solid #6a2b;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 786px) {
+  .video-con {
+    display: inline-block;
+    
+    
+    .video {
+      margin-left: 0px;
+    }
+  }
+}
