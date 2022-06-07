@@ -91,3 +91,17 @@
     width: fit-content;
   }
 }
+.divider{
+  background-color: rgba(
+    185,
+    226,
+    144,
+    0.733
+  ); /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(170, 246, 77, 0.733),
+    rgb(230, 251, 229)
+  );
+  height: 300px;
+}
