@@ -1,107 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-.cover {
-  width: 100%;
-  height: 1000px;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
+/* Basic Styles */
 
-  img {
-    max-width: inherit;
-    max-height: inherit;
-    width: inherit;
-    height: inherit;
-    filter: brightness(0.5);
-  }
-}
-.cover-q {
-  text-align: center;
-  margin: 0 auto;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 45px;
-  color: aliceblue;
-  font-family: "Satisfy", cursive;
-  width: inherit;
-  width: 800px;
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 0px) and (max-width: 786px) {
-  .cover-q {
-    margin-top: 100px;
-    max-width: 300px;
-  }
-}
-.image-holder {
-  width: 100%;
-  height: 500px;
+header, main, footer {
   padding: 20px;
+}
+
+h1, h2 {
   text-align: center;
-
-  img {
-    width: 60%;
-    height: 450px;
-    margin: 0 auto;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      0 0 20px rgba(102, 120, 34, 1);
-  }
+  margin-bottom: 20px;
 }
 
-.image-holder:hover {
-  img {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 20px rgb(120, 34, 34);
-  }
+section {
+  margin-bottom: 40px;
 }
 
-.card {
-  background-color: rgba(
-    185,
-    226,
-    144,
-    0.733
-  ); /* For browsers that do not support gradients */
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(170, 246, 77, 0.733),
-    rgb(230, 251, 229)
-  );
-  width: 600px;
-  height: 450px;
-  margin: 0 auto;
-  text-align: center;
-  p{
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    color: #6a2b;
-  }
-}
-
-.name {
-  color: #6a2b;
-  font-size: 56px;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 90px;
-}
-@media (min-width: 0px) and (max-width: 786px) {
-  .card{
-    width: fit-content;
-  }
-}
-.divider{
-  background-color: rgba(
-    185,
-    226,
-    144,
-    0.733
-  ); /* For browsers that do not support gradients */
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(170, 246, 77, 0.733),
-    rgb(230, 251, 229)
-  );
-  height: 300px;
-}
+/* Styles for specific sections can be added here */
