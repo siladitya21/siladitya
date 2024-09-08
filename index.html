@@ -1,1 +1,77 @@
-baba amar hu hu kore
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Pictures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ffcc00;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Funny Pictures</h1>
+    </header>
+    <main>
+        <section class="gallery">
+            <img src="https://example.com/funny-pic1.jpg" alt="Funny Picture 1">
+            <img src="https://example.com/funny-pic2.jpg" alt="Funny Picture 2">
+            <img src="https://example.com/funny-pic3.jpg" alt="Funny Picture 3">
+            <img src="https://example.com/funny-pic4.jpg" alt="Funny Picture 4">
+            <!-- Add more images here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Funny Pictures Website</p>
+    </footer>
+</body>
+</html>
