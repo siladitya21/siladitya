@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marriage Invitation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f9f2f2;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #333;
+        overflow-x: hidden;
+      }
+      .invitation {
+        background: #fff;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid #ff9a9e;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .header {
+        font-size: 2em;
+        color: #ff9a9e;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .details {
+        font-size: 1.1em;
+        color: #666;
+        margin: 20px 0;
+      }
+      .details p {
+        margin: 10px 0;
+      }
+      .decorative {
+        color: #ff9a9e;
+        font-size: 1.3em;
+        margin: 20px 0;
+        animation: pulse 1.5s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+      }
+      .footer {
+        font-size: 1em;
+        color: #999;
+        margin-top: 30px;
+        animation: fadeIn 1s ease-out 0.5s forwards;
+      }
+      .map iframe {
+        width: 100%;
+        height: 250px;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+      .contact p {
+        margin: 10px 0;
+      }
+      .couple-img {
+        width: 100%;
+        max-width: 80%;
+        border-radius: 10px;
+        margin: 20px 0;
+        transition: transform 0.3s ease;
+      }
+      .couple-img:hover {
+        transform: scale(1.05);
+      }
+      .invitation-note {
+        font-size: 1em;
+        color: #444;
+        margin: 20px 0;
+        font-style: italic;
+        max-width: 100%;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-out 0.5s forwards;
+      }
+      .quote {
+        font-size: 1.1em;
+        color: #ff9a9e;
+        margin: 20px 0;
+        font-style: italic;
+        animation: fadeIn 1s ease-out 0.5s forwards;
+      }
+      .language-selector {
+        margin: 20px;
+        text-align: center;
+      }
+      .language-selector select {
+        font-size: 1em;
+        padding: 10px;
+      }
+      @media (max-width: 576px) {
+        .header {
+          font-size: 1.5em;
+        }
+        .details {
+          font-size: 1em;
+        }
+        .decorative {
+          font-size: 1.2em;
+        }
+        .footer {
+          font-size: 0.9em;
+        }
+        .couple-img {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="language-selector">
+        <label for="language">Select Language: </label>
+        <select id="language" class="form-select form-select-lg mb-3" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="bn">Bengali</option>
+        </select>
+      </div>
+      
+      <div class="invitation">
+        <div class="header" id="header">You are Cordially Invited</div>
+
+        <div class="quote" id="quote">
+          "The best part of love is the unexpected, the part where you hold the other in your arms and feel a silent promise of forever." - Rabindranath Tagore
+        </div>
+
+        <div class="invitation-note" id="invitation-note">
+          Life is not measured by the number of breaths we take, but by moments that take our breath away. Mr. Debashish Deb and Mrs. Kabita Deb warmly invite you to witness their daughter <strong>Debarati</strong> as she embarks on a new journey with the wonderful <strong>Siladitya</strong>, son of Mr. and Mrs. Datta.
+        </div>
+
+        <div class="details">
+          <img
+            src="./postcard-pic.jpg"
+            alt="Siladitya and Debarati"
+            class="couple-img img-fluid"
+          />
+          <div class="decorative">💍💖</div>
+          <p id="names">Siladitya & Debarati</p>
+          <p id="date"><strong>Date:</strong> Sunday, 17th November 2024</p>
+          <p id="time"><strong>Time:</strong> 4:00 PM</p>
+          <p id="venue"><strong>Venue:</strong> Budge Budge Trunk Rd, Parbangla, Budge Budge, Maheshtala, West Bengal 700140</p>
+          <div class="decorative">🎉🌹</div>
+        </div>
+
+        <div class="map">
+          <h2>Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230430.34828714892!2d88.1387353!3d22.4954001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027d945fd31dcd%3A0xe65d85f3df350595!2sBudge%20Budge%20Trunk%20Rd%2C%20Parbangla%2C%20Budge%20Budge%2C%20Maheshtala%2C%20West%20Bengal%20700140!5e0!3m2!1sen!2sin!4v1633949383305!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="contact">
+          <h2 id="contact-header">Contact Us</h2>
+          <p><strong id="phone-1-label">Phone:</strong> <span id="phone-1-no">+91-123-456-7890</span></p>
+          <p><strong id="phone-2-label">Phone:</strong> <span id="phone-2-no">+91-987-654-3210</span></p>
+        </div>
+
+        <div class="footer" id="footer">
+          We would be honored to have you join us on this joyous occasion as we celebrate the union of our families. Your presence will add to our joy.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const translations = {
+        en: {
+          header: "You are Cordially Invited",
+          quote: `"The best part of love is the unexpected, the part where you hold the other in your arms and feel a silent promise of forever." - Rabindranath Tagore`,
+          invitationNote: `Life is not measured by the number of breaths we take, but by moments that take our breath away. Mr. Debashish Deb and Mrs. Kabita Deb warmly invite you to witness their daughter <strong>Debarati</strong> as she embarks on a new journey with the wonderful <strong>Siladitya</strong>, son of Mr. and Mrs. Datta.`,
+          names: `Siladitya & Debarati`,
+          date: `<strong>Date:</strong> Sunday, 17th November 2024`,
+          time: `<strong>Time:</strong> 4:00 PM`,
+          venue: `<strong>Venue:</strong> Budge Budge Trunk Rd, Parbangla, Budge Budge, Maheshtala, West Bengal 700140`,
+          contactHeader: `Contact Us`,
+          phone1Label: `Phone:`,
+          phone1No: `+91-123-456-7890`,
+          phone2Label: `Phone:`,
+          phone2No: `+91-987-654-3210`,
+          footer: `We would be honored to have you join us on this joyous occasion as we celebrate the union of our families. Your presence will add to our joy.`,
+        },
+        bn: {
+          header: "আপনি আন্তরিকভাবে আমন্ত্রিত",
+          quote: `"ভালোবাসার সেরা অংশ হল অপ্রত্যাশিত, সেই অংশ যেখানে আপনি অন্যকে আপনার বাহুতে ধারণ করেন এবং চিরকাল ধরে একটি নীরব প্রতিশ্রুতি অনুভব করেন।" - রবীন্দ্রনাথ ঠাকুর`,
+          invitationNote: `জীবন শুধুমাত্র শ্বাসের সংখ্যা দ্বারা পরিমাপ করা হয় না, বরং সেই মুহূর্তগুলি দ্বারা যা আমাদের শ্বাস কেটে দেয়। মিস্টার দেবাশিস দেব এবং মিসেস কবিতা দেব তাদের কন্যা <strong>দেবরাতি</strong>-কে আপনার সামনে উপস্থিত হতে আন্তরিকভাবে আমন্ত্রণ জানান, যিনি নতুন যাত্রার শুরু করবেন অসাধারণ <strong>সিলাদিত্য</strong>-এর সঙ্গে, যিনি মিস্টার ও মিসেস দত্তের পুত্র।`,
+          names: `সিলাদিত্য ও দেবরাতি`,
+          date: `<strong>তারিখ:</strong> রবিবার, ১৭ই নভেম্বর ২০২৪`,
+          time: `<strong>সময়:</strong> সন্ধ্যা ৪:০০ টা`,
+          venue: `<strong>স্থান:</strong> বাজে বাজে ট্রাঙ্ক রোড, পারবাঙ্গলা, বাজে বাজে, মহেশতলা, পশ্চিমবঙ্গ ৭০০১৪০`,
+          contactHeader: `আমাদের সাথে যোগাযোগ করুন`,
+          phone1Label: `ফোন:`,
+          phone1No: `+৯১-১২৩-৪৫৬-৭৮৯০`,
+          phone2Label: `ফোন:`,
+          phone2No: `+৯১-৯৮৭-৬৫৪-৩২১০`,
+          footer: `আমাদের পরিবারগুলির একীকরণের এই আনন্দময় উপলক্ষে আপনার সাথে যোগদান করার জন্য আমরা সম্মানিত হব। আপনার উপস্থিতি আমাদের আনন্দে যোগ করবে।`,
+        },
+      };
+
+      function changeLanguage() {
+        const lang = document.getElementById("language").value;
+        document.getElementById("header").innerHTML = translations[lang].header;
+        document.getElementById("quote").innerHTML = translations[lang].quote;
+        document.getElementById("invitation-note").innerHTML = translations[lang].invitationNote;
+        document.getElementById("names").innerHTML = translations[lang].names;
+        document.getElementById("date").innerHTML = translations[lang].date;
+        document.getElementById("time").innerHTML = translations[lang].time;
+        document.getElementById("venue").innerHTML = translations[lang].venue;
+        document.getElementById("contact-header").innerHTML = translations[lang].contactHeader;
+        document.getElementById("phone-1-label").innerHTML = translations[lang].phone1Label;
+        document.getElementById("phone-1-no").innerHTML = translations[lang].phone1No;
+        document.getElementById("phone-2-label").innerHTML = translations[lang].phone2Label;
+        document.getElementById("phone-2-no").innerHTML = translations[lang].phone2No;
+        document.getElementById("footer").innerHTML = translations[lang].footer;
+      }
+    </script>
+  </body>
+</html>
