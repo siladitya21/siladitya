@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "siladitya-debarati": {
+    "siladitya": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/siladitya-debarati",
+            "outputPath": "dist/siladitya",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "siladitya-debarati:build:production"
+              "buildTarget": "siladitya:build:production"
             },
             "development": {
-              "buildTarget": "siladitya-debarati:build:development"
+              "buildTarget": "siladitya:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +99,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
